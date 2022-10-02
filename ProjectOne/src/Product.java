@@ -77,9 +77,9 @@ public class Product implements Serializable {
     }
 
     public String toString(){
-        return "pid: " + pid + "description: " + description + 
-                "quantity: " + quantity + "price: " + price + 
-                "wholesale price: " + wholesalePrice + 
-                "waitlist: " + waitlist.toString();
+        return "pid: " + pid + ", description: " + description + 
+                ", quantity: " + quantity + ", price: " + price + 
+                ", wholesale price: " + wholesalePrice + 
+                ", waitlist: " + waitlist.toString() + "\n";
     }
 }

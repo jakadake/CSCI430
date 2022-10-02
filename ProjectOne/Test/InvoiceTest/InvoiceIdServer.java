@@ -1,28 +1,27 @@
 /*******************************************************************
  * 
- * Project 1: Warehouse, ClientIDServer implementation
- * File: ClientIDServer.java
+ * Project 1: Warehouse, ProdcutIdServer implementation
+ * File: ProductIdServer.java
  * 
- * Author: Nathan O'Connor
+ * Author: Joseph Hoversten
  * Group Number: 2
  * Instructor: Dr. Ramnath Sarnath
  * Class: CSCI 430
  * 
- * Based On: Book.java by Dr. Ramnath Sarnath
+ * Based On: MemberIdServer.java by Dr. Ramnath Sarnath
  * 
  *******************************************************************/
 
 import java.io.*;
-public class ClientIdServer implements Serializable {
-  private static final long serialVersionUID = 1L;
+public class InvoiceIdServer implements Serializable {
   private  int idCounter;
-  private static ClientIdServer server;
-  private ClientIdServer() {
+  private static InvoiceIdServer server;
+  private InvoiceIdServer() {
     idCounter = 1;
   }
-  public static ClientIdServer instance() {
+  public static InvoiceIdServer instance() {
     if (server == null) {
-      return (server = new ClientIdServer());
+      return (server = new InvoiceIdServer());
     } else {
       return server;
     }
@@ -35,7 +34,7 @@ public class ClientIdServer implements Serializable {
   }
   public static void retrieve(ObjectInputStream input) {
     try {
-      server = (ClientIdServer) input.readObject();
+      server = (InvoiceIdServer) input.readObject();
     } catch(IOException ioe) {
       ioe.printStackTrace();
     } catch(Exception cnfe) {
@@ -54,7 +53,7 @@ public class ClientIdServer implements Serializable {
     try {
       input.defaultReadObject();
       if (server == null) {
-        server = (ClientIdServer) input.readObject();
+        server = (InvoiceIdServer) input.readObject();
       } else {
         input.readObject();
       }

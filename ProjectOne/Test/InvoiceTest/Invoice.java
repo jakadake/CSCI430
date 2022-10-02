@@ -11,10 +11,10 @@
  * Based On: Book.java by Dr. Ramnath Sarnath
  * 
  *******************************************************************/
-import java.io.*;
+
 import java.util.*;
 
-public class Invoice implements Serializable{
+public class Invoice{
     
     private String date;
     private double total;
@@ -38,10 +38,6 @@ public class Invoice implements Serializable{
 
     public int getId() {
         return id;
-    }
-
-    public String getDate(){
-        return date;
     }
 
     public Iterator<Wish> getWishlist() {

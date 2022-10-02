@@ -36,7 +36,7 @@ public class ShipmentList implements Serializable {
         return shipments.add(shipment);
     }
 
-    public Iterator getShipments() {
+    public Iterator<Shipment> getShipments() {
         return shipments.iterator();
     }
 
@@ -71,5 +71,4 @@ public class ShipmentList implements Serializable {
     public String toString() {
         return shipments.toString();
     }
-
 }

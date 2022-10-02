@@ -12,10 +12,11 @@
  * 
  *******************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
-public class TransactionHistory {
-    
+public class TransactionHistory implements Serializable{
+    private static final long serialVersionUID = 1L;
     private LinkedList<Transaction> transactions;
     private double balance;
 
@@ -43,7 +44,7 @@ public class TransactionHistory {
         return false;
     }
     
-    public Iterator getTransactions(){
+    public Iterator<Transaction> getTransactions(){
         return transactions.iterator();
     }
 
